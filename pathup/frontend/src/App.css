@@ -1,0 +1,234 @@
+/*-- Dark Neon Theme --*/
+
+/* General Body Styles with Neon Streaks */
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #0d1117;
+    background-image:
+        linear-gradient(120deg, transparent 30%, hsla(189, 100%, 50%, 0.1) 60%, hsla(189, 100%, 50%, 0.0) 100%),
+        linear-gradient(60deg, transparent 30%, hsla(280, 100%, 50%, 0.1) 60%, hsla(280, 100%, 50%, 0.0) 100%);
+    color: #e6edf3;
+    margin: 0;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+/* Main App Container with Soft Blue Gradient */
+.App {
+    width: 100%;
+    max-width: 900px;
+    background: linear-gradient(145deg, #1a2333, #111827); /* Soft blue gradient */
+    padding: 2.5rem;
+    border-radius: 16px;
+    border: 1px solid #00aaff;
+    box-shadow: 0 0 40px rgba(0, 170, 255, 0.35);
+    text-align: center;
+}
+
+/* Header */
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(0, 170, 255, 0.5);
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    color: #8b949e;
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+}
+
+/* Form Container */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+/* Textarea and File Input */
+textarea {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    font-family: inherit;
+    background-color: #0d1117;
+    color: #e6edf3;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    box-sizing: border-box;
+    min-height: 180px;
+    resize: vertical;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #00aaff;
+    box-shadow: 0 0 0 3px rgba(0, 170, 255, 0.25);
+}
+
+/* Custom File Input Styling */
+input[type="file"] {
+    background-color: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    padding: 0.5rem;
+    font-size: 1rem;
+    color: #8b949e;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+    background-color: #00aaff;
+    color: #0d1117;
+    font-weight: bold;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-right: 1rem;
+}
+
+input[type="file"]::-webkit-file-upload-button:hover {
+    background-color: #33bbff;
+}
+
+/* Submit Button */
+button {
+    background: transparent;
+    color: #00aaff;
+    border: 2px solid #00aaff;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+    align-self: center;
+    text-shadow: 0 0 5px rgba(0, 170, 255, 0.5);
+}
+
+button:hover {
+    background-color: rgba(0, 170, 255, 0.1);
+    box-shadow: 0 0 15px rgba(0, 170, 255, 0.4);
+}
+
+button:disabled {
+    color: #484f58;
+    border-color: #30363d;
+    background: transparent;
+    cursor: not-allowed;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+/* Error and Loading States */
+.error {
+    color: #ff7b72;
+    background-color: rgba(248, 81, 73, 0.1);
+    border: 1px solid #ff7b72;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+}
+
+.loading {
+    font-size: 1.1rem;
+    color: #00aaff;
+    margin-top: 1.5rem;
+}
+
+/* Results Section */
+.results-container {
+    margin-top: 3rem;
+    text-align: left;
+    border-top: 1px solid #30363d;
+    padding-top: 2rem;
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.skill-list {
+    background: #0d1117;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid #30363d;
+}
+
+.skill-list h3 {
+    margin-top: 0;
+    font-size: 1.25rem;
+    color: #e6edf3;
+    border-bottom: 1px solid #30363d;
+    padding-bottom: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.skill-list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skill-list li {
+    background: #161b22;
+    margin-bottom: 0.5rem;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    border: 1px solid #30363d;
+    font-size: 0.95rem;
+    transition: transform 0.2s ease;
+}
+
+.skill-list li:hover {
+    transform: translateX(5px);
+}
+
+/* Neon accent colors for skill lists */
+.resume-skills li { border-left: 4px solid #39d353; }
+.jd-skills li { border-left: 4px solid #1f6feb; }
+.gap-analysis li { border-left: 4px solid #f1e05a; }
+.recommendations li { border-left: 4px solid #a371f7; }
+
+.gap-analysis, .recommendations {
+    margin-top: 2rem;
+    grid-column: 1 / -1;
+}
+
+.recommendations a {
+    color: #58a6ff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.recommendations a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .App {
+        padding: 1.5rem;
+        border: none;
+        box-shadow: none;
+    }
+
+    .results-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+}

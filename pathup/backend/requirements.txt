@@ -1,0 +1,8 @@
+Flask
+pytesseract
+scikit-learn
+nltk
+sentence-transformers
+Pillow
+PyMuPDF
+Flask-Cors
